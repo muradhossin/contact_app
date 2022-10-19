@@ -1,4 +1,4 @@
-import 'dart:js';
+
 
 import 'package:contact_app/pages/details_page.dart';
 import 'package:contact_app/pages/home_page.dart';
