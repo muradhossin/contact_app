@@ -23,7 +23,9 @@ class _HomePageState extends State<HomePage> {
           itemCount: provider.contactList.length,
           itemBuilder: (context, index){
             final contact = provider.contactList[index];
-            return ContactItem(contact: contact);
+            return ContactItem(contact: contact, onUpdateFavorite: (int id) {
+              provider.updateFavorite(id);
+            }, );
           },
         ),
       ),

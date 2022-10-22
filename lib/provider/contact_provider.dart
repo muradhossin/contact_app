@@ -59,4 +59,11 @@ class ContactProvider extends ChangeNotifier {
       image: 'images/personicon.png',
     ),
   ];
+
+  void updateFavorite(int id){
+    final contact = contactList.firstWhere((element) => element.id == id);
+    final index = contactList.indexOf(contact);
+    contactList[index].favorite = !contactList[index].favorite;
+    notifyListeners();
+  }
 }

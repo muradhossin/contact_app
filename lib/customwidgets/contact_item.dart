@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 
 class ContactItem extends StatelessWidget {
   final ContactModel contact;
-  const ContactItem({Key? key, required this.contact}) : super(key: key);
+  final Function(int id) onUpdateFavorite;
+  const ContactItem({Key? key, required this.contact, required this.onUpdateFavorite}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class ContactItem extends StatelessWidget {
       trailing: IconButton(
         icon: Icon(contact.favorite? Icons.favorite : Icons.favorite_border),
         onPressed: (){
-
+          onUpdateFavorite(contact.id);
         },
       ),
     );
