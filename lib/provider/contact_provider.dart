@@ -8,7 +8,6 @@ class ContactProvider extends ChangeNotifier {
       id: 1,
       name: 'Murad Hossin',
       mobile: '01644086750',
-      email: 'murad15-2547@diu.edu.bd',
       website: 'www.muradhossin.me',
       streetAddress: 'Ashulia',
       image: 'images/personicon.png',

@@ -1,4 +1,5 @@
 import 'package:contact_app/models/contact_model.dart';
+import 'package:contact_app/pages/details_page.dart';
 import 'package:flutter/material.dart';
 
 class ContactItem extends StatelessWidget {
@@ -8,6 +9,9 @@ class ContactItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      onTap: (){
+        Navigator.pushNamed(context, DetailsPage.routeName, arguments: contact);
+      },
       leading: CircleAvatar(
         backgroundImage: AssetImage(contact.image!),
       ),
